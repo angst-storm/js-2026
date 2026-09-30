@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiprin Sergei</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            min-height: 100vh;
+            gap: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .dock {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 28px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .dock.horizontal {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .dock.vertical {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .dock-item {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            object-fit: cover;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: bottom center;
+        }
+
+        .dock.vertical .dock-item {
+            transform-origin: left center;
+        }
+
+        .dock-item:hover {
+            width: 100px;
+            height: 100px;
+        }
+
+        .dock-item:hover + .dock-item {
+            width: 80px;
+            height: 80px;
+        }
+
+        .dock-item:hover + .dock-item + .dock-item {
+            width: 70px;
+            height: 70px;
+        }
+
+        .dock-item:has(+ .dock-item:hover) {
+            width: 80px;
+            height: 80px;
+        }
+
+        .dock-item:has(+ .dock-item + .dock-item:hover) {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dock vertical">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=1" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=2" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=3" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=4" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=5" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=6" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=7" alt="Cat">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dock horizontal">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=1" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=2" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=3" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=4" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=5" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=6" alt="Cat">
+            <img class="dock-item" src="https://cataas.com/cat?width=200&height=200&id=7" alt="Cat">
+        </div>
+    </div>
+</body>
+</html>
