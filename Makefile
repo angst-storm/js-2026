@@ -5,6 +5,8 @@ IMAGE_NAME = js-2025-kiprin
 IMAGE_TAG ?= $($(IMAGE_TAG),latest)
 LOCAL_HTTP_PORT = 80
 LOCAL_HTTPS_PORT = 443
+GITHUB_USERNAME = angst-storm
+GITHUB_REPO = js-2026
 
 certs:
 	mkdir -p certs
@@ -38,9 +40,11 @@ login:
 
 memo:
 	@echo "адрес: e.d.saichik@urfu.ru"
-	@echo "заголовок: JavaScript Лабораторная работа №2 Киприн Сергей РИМ-250950"
+	@echo "заголовок: JavaScript Лабораторная работа №3 Киприн Сергей РИМ-250950"
 	@echo "тело:"
-	@echo "Ссылка на реестр образов: $(DOCKER_USERNAME)/$(IMAGE_NAME):$(IMAGE_TAG)"
+# 	@echo "Ссылка на реестр образов: $(DOCKER_USERNAME)/$(IMAGE_NAME):$(IMAGE_TAG)"
+	@echo "Ссылка на репозиторий GitHub: https://github.com/$(GITHUB_USERNAME)/$(GITHUB_REPO)"
+	@echo "Отчет во вложении."
 	@echo ""
 	@echo "С уважением,"
 	@echo "студент Киприн Сергей РИМ-250950."

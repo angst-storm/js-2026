@@ -19,7 +19,7 @@ console.log(`результат: index=${index}\n`);
 
 // Сбалансированность скобок O(n)
 const bracketSamples = ['({})', '({)}', '()[]<>{}', '<{[()]}>', '((()', ')('];
-console.log('- Сбалансированность скобок -\n');
+console.log('3. Сбалансированность скобок\n');
 for (const sample of bracketSamples) {
   console.log(`${sample} - ${isBalanced(sample) ? 'корректный ввод' : 'некорректный ввод'}`);
 }
