@@ -40,7 +40,7 @@ login:
 
 memo:
 	@echo "адрес: e.d.saichik@urfu.ru"
-	@echo "заголовок: JavaScript Лабораторная работа №3 Киприн Сергей РИМ-250950"
+	@echo "заголовок: JavaScript Лабораторная работа №5 Киприн Сергей РИМ-250950"
 	@echo "тело:"
 # 	@echo "Ссылка на реестр образов: $(DOCKER_USERNAME)/$(IMAGE_NAME):$(IMAGE_TAG)"
 	@echo "Ссылка на репозиторий GitHub: https://github.com/$(GITHUB_USERNAME)/$(GITHUB_REPO)"
