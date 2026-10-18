@@ -4,6 +4,7 @@ import { isBalanced } from './brackets.js';
 import { heapSort } from './heapsort.js';
 import { topKLargest, topKSmallest } from './topk.js';
 import { PriorityQueue } from './priorityqueue.js';
+import { Dictionary } from './dictionary.js';
 
 // Быстрая сортировка O(n log n)
 const sortSample = [3, 1, 4, 1, 5, 9, 2, 6]
@@ -55,3 +56,12 @@ while (!pq.isEmpty()) {
 }
 console.log(`dequeue все элементы: [${extracted.join(', ')}]`);
 
+// Словарь языка
+console.log('\n7. Словарь языка (Trie)\n');
+const dict = new Dictionary();
+dict.addAll(['кот', 'коты', 'код', 'дом', 'домой']);
+dict.add('кора');
+console.log(`слов: ${dict.wordCount}`);
+for (const word of ['кот', 'код', 'ко', 'кора', 'собака']) {
+  console.log(`has("${word}") → ${dict.has(word)}`);
+}
