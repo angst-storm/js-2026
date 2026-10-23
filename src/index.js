@@ -5,6 +5,8 @@ import { heapSort } from './heapsort.js';
 import { topKLargest, topKSmallest } from './topk.js';
 import { PriorityQueue } from './priorityqueue.js';
 import { Dictionary } from './dictionary.js';
+import { SuffixTree } from './suffixtree.js';
+import { longestPalindrome } from './longestpalindrome.js';
 
 // Быстрая сортировка O(n log n)
 const sortSample = [3, 1, 4, 1, 5, 9, 2, 6]
@@ -65,3 +67,21 @@ console.log(`слов: ${dict.wordCount}`);
 for (const word of ['кот', 'код', 'ко', 'кора', 'собака']) {
   console.log(`has("${word}") → ${dict.has(word)}`);
 }
+
+// Суффиксное дерево
+console.log('\n8. Суффиксное дерево\n');
+const text = 'банан';
+const st = new SuffixTree(text);
+console.log(`текст: "${text}", узлов: ${st.nodeCount}`);
+for (const pattern of ['ана', 'нан', 'бан', 'яблоко', 'а']) {
+  console.log(
+    `contains("${pattern}") → ${st.contains(pattern)}, позиции: [${st.findAll(pattern).join(', ')}]`
+  );
+}
+
+// Наибольший палиндром через суффиксное дерево
+console.log('\n9. Наибольший палиндром\n');
+for (const sample of ['банан', 'казак', 'абба', 'молоко', 'а']) {
+  console.log(`"${sample}" → "${longestPalindrome(sample)}"`);
+}
+
